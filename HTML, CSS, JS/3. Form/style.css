@@ -1,0 +1,50 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px; 
+}
+
+.body{
+    padding: 1em;
+    width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+    background-color: #CAD9EC;
+}
+
+.header{
+    padding: 0 0 5px 0;
+    font-size: 15px; 
+}
+
+.content{
+    border: 1px solid black;
+    padding: 10px 20px;
+}
+
+.row{
+    border: dashed #A3BAE9;
+    border-width: 0 0 2px 0;
+    padding: 5px 0;
+}
+
+.name-col{
+    display: inline-block;
+    width: 30%;
+}
+
+.value-col{
+    display: inline-block;    
+}
+
+.input-text{
+    padding: 4px;
+    width: 175px;
+    border: 0;
+}
+
+#registrations{
+    margin: 10px 0 0 0;
+    padding: 4px;
+}

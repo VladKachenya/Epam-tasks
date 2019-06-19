@@ -1,0 +1,23 @@
+.wrap{
+    background-color: #F5F4F1;
+    float: left;
+    padding: 25px;
+    display: flex;
+    flex-direction: row; 
+    align-items: stretch;
+}
+
+.div-with-girl-text{
+    text-align: right;
+}
+
+.separation-line{
+    width: 3px;
+    margin: 0 10px;
+    background-color: #BB8A56;
+}
+
+.right-div{
+    font-size: 33px;
+    width: 200px;
+}
