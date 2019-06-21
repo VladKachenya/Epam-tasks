@@ -1,5 +1,5 @@
-.body{
-    padding: 1em;
+.body {
+    padding: 7px;
     width: 75%;
     height: auto;
     margin-left: auto;
@@ -8,39 +8,38 @@
     background-image: url(background.png);
 }
 
-.body-header{
+.body-header {
     text-align: center;
     font-size: 20px;
     font-weight: bold;
 }
 
-.wrap-item{
+.wrap-item {
     width: 100px;
     height: 150px;
     margin: 10px;
-    background-color: #FAF4E8; 
+    background-color: #FAF4E8;
     display: inline-block;
-    position:relative;
+    position: relative;
 }
 
-.wrap-item-text{
+.wrap-item-text {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     width: 100%;
     height: auto;
     text-align: center;
 }
 
-.wrap-item-image{
+.wrap-item-image {
     position: absolute;
-    top:0;
+    top: 0;
     margin: 5%;
     width: 90%;
     height: 65%;
 }
 
-
-.wrap-item-image img{
+.wrap-item-image img {
     width: auto;
     height: auto;
     display: block;
@@ -49,11 +48,7 @@
     object-fit: contain;
     max-height: 96%;
     max-width: 96%;
-
     /*Рамка*/
     padding: 2%;
-    background-color: black; 
+    background-color: black;
 }
-
-
-
