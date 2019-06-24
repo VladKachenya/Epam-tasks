@@ -1,0 +1,270 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: -0.05em;
+    color: #313131;
+}
+
+li {
+    list-style-type: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.background-black {
+    background-color: #313131;
+}
+
+.collor-lightGrey span, 
+.collor-lightGrey i, 
+.collor-lightGrey {
+    color: #C4C4C4;
+}
+
+.header {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+body {
+    background-color: #F5F6F2
+}
+
+input, textarea, button, a, a>i {
+    outline: none;
+    border: 0;
+    font-weight: 900;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover, button:hover {
+    opacity: 0.4;
+    transition: all 0.5s ease;
+}
+
+/*site skeleton styles*/
+
+.site {
+    overflow: hidden;
+    width: 55%;
+    height: auto;
+    margin-top: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+}
+
+.content, .sidebar-item {
+    background-color: #ffffff;
+}
+
+.content {
+    float: left;
+    width: 65%;
+}
+
+.sidebar {
+    float: right;
+    width: 33%;
+}
+
+/*content-header styles*/
+
+.content-header {
+    display: flex;
+    margin: 2em 3em;
+}
+
+.content-header-userIcon i {
+    letter-spacing: normal;
+    font-size: 4.5em;
+}
+
+.content-header-title {
+    padding: 0 1em;
+}
+
+.content-header-title-text {
+    height: 50%;
+    letter-spacing: normal;
+    font-weight: 800;
+    font-size: 2em;
+    margin-bottom: 0.2em;
+}
+
+.content-header-title-info i, .content-header-title-info span {
+    margin-right: 0.3em;
+}
+
+/*content-image styles*/
+
+.content-image {
+    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%;
+    margin-bottom: 2.4em;
+}
+
+.content-image-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.content-image-pincil {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.content-image-pincil:hover {
+    opacity: 1;
+}
+
+.content-image-pincil i:hover {
+    background-color: #313131;
+    transition: all 0.3s ease;
+}
+
+.content-image-pincil>i {
+    border-radius: 50%;
+    padding: 0.3em;
+    font-size: 3em;
+    background-color: #ffffff;
+    color: #6DC169;
+}
+
+/*content-text styles*/
+
+.content-text {
+    margin: 0 4em 4em 4em;
+    line-height: 1.5;
+}
+
+/*content-footer styles*/
+
+.content-footer {
+    float: right;
+    display: flex;
+}
+
+
+.content-footer-readMore {
+    background-color: #61C276;
+    padding: 0.75em 1.5em;
+}
+
+.content-footer-readMore i {
+    color: inherit;
+    margin-left: 0.3em;
+}
+
+.content-footer-social {
+    text-align: center;
+    width: 1.5em;
+    padding: 0.75em 1em;
+}
+
+/*sidebar styles*/
+
+.sidebar-padding {
+    padding: 1em 1.4em;
+}
+
+.sidebar-item {
+    margin-bottom: 2.1em;
+}
+
+.sidebar-item-border {
+    border-bottom: 1px solid #F5F6F2;
+}
+
+/*sidebar-search styles*/
+
+.sidebar-search {
+    letter-spacing: -.36em;
+}
+
+.sidebar-search button, .sidebar-search input {
+    height: 2.6em;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0.2em 1em;
+    font-size: 0.7em;
+}
+
+.sidebar-search button {
+    text-transform: uppercase;
+    background-color: #61C276;
+}
+
+.sidebar-search input {
+    width: 11em;
+    background-color: #343434;
+}
+
+/* sidebar-categories styles */
+
+.sidebar-categories>li {
+    padding: 0.8em 0;
+    cursor: pointer;
+}
+
+/* sidebar-latestPost styles*/
+
+.sidebar-latestPost li {
+    margin: 2em 0;
+    display: flex;
+    cursor: pointer;
+}
+
+.sidebar-latestPost-item-image {
+    position: relative;
+    width: 5em;
+    min-width: 5em;
+    max-width: 5em;
+    padding-bottom: 5em;
+}
+
+.sidebar-latestPost-item-image>div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.sidebar-latestPost-item-image>div img {
+    width: auto;
+    align-self: center;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.sidebar-latestPost-item-text {
+    font-size: 0.8em;
+    letter-spacing: normal;
+    margin: 0.2em;
+}
+
+.sidebar-latestPost-item-info{
+    margin: 0.2em;
+}
+
+.sidebar-latestPost-item-info span{
+    font-size: 0.8em;
+}
