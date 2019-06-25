@@ -17,24 +17,32 @@
                     <i class="fa fa-user-circle" aria-hidden="true"></i>
                 </div>
                 <div class="content-header-title">
-                    <div class="content-header-title-text header">
+                    <h2 class="content-header-title-text header">
                         Port harbor
-                    </div>
-                    <div class="content-header-title-info collor-lightGrey">
-                        <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        <span> December 13, 2013</span>
-                        <i class="fa fa-folder-open-o" aria-hidden="true"></i>
-                        <span> illustration</span>
-                        <i class="fa fa-comment-o" aria-hidden="true"></i>
-                        <span>No Comments</span>
-                    </div>
+                    </h2>
+                    <ul class="content-header-title-info collor-lightGrey">
+                        <li>
+                            <i class="fa fa-clock-o" aria-hidden="true"></i>
+                            <span> December 13, 2013</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-folder-open-o" aria-hidden="true"></i>
+                            <span> illustration</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-comment-o" aria-hidden="true"></i>
+                            <span>No Comments</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="content-image">
                 <div class="content-image-container background-black">
                     <img src="images/port.jpg" />
                 </div>
-                <a href="#" onclick="return false;" class="content-image-pincil">
+            </div>
+            <div class="pencil">
+                <a href="#" onclick="return false;" class="content-pencil">
                     <i class="fa fa-pencil" aria-hidden="true"></i>
                 </a>
             </div>
@@ -48,33 +56,42 @@
                     stuff possible? Well, to answer that question, we need to learn a little bit.
                 </p>
             </div>
-            <div class="content-footer">
-
-                <a href="#" onclick="return false;" class="content-footer-social background-black">
-                    <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="#" onclick="return false;" class="content-footer-social background-black">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="#" onclick="return false;" class="content-footer-social background-black">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i>
-                </a>
-                <a href="#" onclick="return false;" class="content-footer-social background-black">
-                    <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-                <a href="#" onclick="return false;" class="content-footer-readMore">
-                    read more
-                    <i class="fa fa-clock-o" aria-hidden="true"></i>
-                </a>
-            </div>
+            <ul class="content-footer">
+                <li>
+                    <a href="#" onclick="return false;" class="background-black">
+                        <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="return false;" class="background-black">
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="return false;" class="background-black">
+                        <i class="fa fa-google-plus" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="return false;" class="background-black">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" onclick="return false;">
+                        read more
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="sidebar">
             <div class="sidebar-item sidebar-padding">
-                <div class="sidebar-search">
+                <form class="sidebar-search">
                     <input class="sidebar-search-input-text" type="text">
                     <button id="search">search</button>
-                </div>
+                </form>
             </div>
 
             <div class="sidebar-item">
@@ -82,8 +99,8 @@
                     Categories
                 </div>
                 <ul class="sidebar-padding sidebar-categories">
-                    <li class="sidebar-item-border">Apps</li>
-                    <li class="sidebar-item-border">Illustration</li>
+                    <li>Apps</li>
+                    <li>Illustration</li>
                     <li>Logo</li>
                 </ul>
             </div>
@@ -94,61 +111,48 @@
                 </div>
                 <ul class="sidebar-latestPost sidebar-padding">
                     <li>
-                        <div class="sidebar-latestPost-item-image">
-                            <div>
-                                <img src="images/latestPost.jpg"></img>
-                            </div>
+                        <div class="sidebar-latestPost-item-image" style="background-image: url(images/latestPost.jpg)">
                         </div>
                         <div class="sidebar-latestPost-item-title">
-                            <div class="sidebar-latestPost-item-text header">
+                            <h4 class="sidebar-latestPost-item-text header">
                                 The lichthouse effect
-                            </div>
+                            </h4>
                             <div class="sidebar-latestPost-item-info collor-lightGrey">
                                 <span> December 13, 2013</span>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div class="sidebar-latestPost-item-image">
-                            <div>
-                                <img src="images/giraffe.jpg"></img>
-                            </div>
+                        <div class="sidebar-latestPost-item-image" style="background-image: url(images/giraffe.jpg)">
                         </div>
                         <div class="sidebar-latestPost-item-title">
-
-                            <div class="sidebar-latestPost-item-text header">
+                            <h4 class="sidebar-latestPost-item-text header">
                                 one more beer
-                            </div>
+                            </h4>
                             <div class="sidebar-latestPost-item-info collor-lightGrey">
                                 <span> December 13, 2013</span>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div class="sidebar-latestPost-item-image">
-                            <div>
-                                <img src="images/port.jpg"></img>
-                            </div>
+                        <div class="sidebar-latestPost-item-image" style="background-image: url(images/port.jpg)">
                         </div>
                         <div class="sidebar-latestPost-item-title">
-                            <div class="sidebar-latestPost-item-text header">
+                            <h4 class="sidebar-latestPost-item-text header">
                                 port harbor
-                            </div>
+                            </h4>
                             <div class="sidebar-latestPost-item-info collor-lightGrey">
                                 <span> December 13, 2013</span>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <div class="sidebar-latestPost-item-image">
-                            <div>
-                                <img src="images/mines.jpg"></img>
-                            </div>
+                        <div class="sidebar-latestPost-item-image" style="background-image: url(images/mines.jpg)">
                         </div>
                         <div class="sidebar-latestPost-item-title">
-                            <div class="sidebar-latestPost-item-text header">
+                            <h4 class="sidebar-latestPost-item-text header">
                                 underground volcano
-                            </div>
+                            </h4>
                             <div class="sidebar-latestPost-item-info collor-lightGrey">
                                 <span> December 13, 2013</span>
                             </div>
@@ -156,7 +160,6 @@
                     </li>
                 </ul>
             </div>
-
         </div>
     </div>
 </body>
