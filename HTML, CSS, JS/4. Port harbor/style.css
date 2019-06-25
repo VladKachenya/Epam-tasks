@@ -50,6 +50,7 @@ a:hover, button:hover {
 /*site skeleton styles*/
 
 .site {
+    min-width: 640px;
     overflow: hidden;
     width: 65%;
     height: auto;
@@ -97,7 +98,8 @@ a:hover, button:hover {
     margin-bottom: 0.2em;
 }
 
-.content-header-title-info i, .content-header-title-info span {
+.content-header-title-info i, 
+.content-header-title-info span {
     margin-right: 0.3em;
 }
 
