@@ -21,6 +21,7 @@
     background-color: #FAF4E8;
     display: inline-block;
     position: relative;
+    cursor: pointer;
 }
 
 .wrap-item-text {
