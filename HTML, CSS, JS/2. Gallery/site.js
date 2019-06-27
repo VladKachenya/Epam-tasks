@@ -1,5 +1,5 @@
 var portUrl = window.location.href.split('2.%20Gallery')[0]
-    + '/4.%20Port%20harbor/index.html';
+    + '4.%20Port%20harbor/index.html';
 
 var items = document.getElementsByClassName('wrap-item');
 for (let index = 0; index < items.length; index++) {
