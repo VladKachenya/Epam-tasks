@@ -3,7 +3,8 @@ var galleryUrl = window.location.href.split('4.%20Port%20harbor')[0]
 
 var imgSrc = sessionStorage.getItem('imgSrc');
 if (imgSrc != null) {
-    document.getElementById('main_img').src = imgSrc;
+    document.getElementById('main_img').
+        getElementsByTagName('img')[0].src = imgSrc;
 }
 
 var pencils = document.getElementsByClassName('pencil');

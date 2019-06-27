@@ -123,13 +123,33 @@ a:hover, button:hover {
     position: absolute;
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+
+.content-image-container-active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #31313171;
+    z-index: 100;
+}
+
+.content-image-container-active>div{
+    margin: auto;
+    margin-top: 7.5%;
+    width: 70%;
+    height: 70%;
 }
 
 .content-image img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
+
+
 
 .pencil{
     text-align: center;
