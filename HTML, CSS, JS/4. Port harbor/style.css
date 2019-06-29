@@ -5,7 +5,7 @@
     color: #313131;
 }
 
-h2{
+h2 {
     margin: 0;
 }
 
@@ -22,9 +22,7 @@ ul {
     background-color: #313131;
 }
 
-.collor-lightGrey span, 
-.collor-lightGrey i, 
-.collor-lightGrey {
+.collor-lightGrey span, .collor-lightGrey i, .collor-lightGrey {
     color: #C4C4C4;
 }
 
@@ -102,12 +100,11 @@ a:hover, button:hover {
     margin-bottom: 0.3em;
 }
 
-.content-header-title-info>li{
+.content-header-title-info>li {
     display: inline-block;
 }
 
-.content-header-title-info i, 
-.content-header-title-info span {
+.content-header-title-info i, .content-header-title-info span {
     margin-right: 0.3em;
 }
 
@@ -126,7 +123,46 @@ a:hover, button:hover {
     overflow: hidden;
 }
 
-.content-image-container-active{
+.content-image-container>a{
+    display: none;
+}
+
+/*Slider styles*/
+
+.slider-item{
+    display: none;
+}
+
+.content-image-container-active>a{
+    display: block;
+    position: relative;
+    height: 100%;
+    width: 20%;
+    cursor: pointer;
+}
+
+.content-image-container-active>a>span{
+    display:block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6em; 
+}
+
+.slider-prev{
+    float: left;
+}
+
+.slider-next{
+    float: right;
+}
+
+.slider-item:first-child{
+    display: block;
+}
+
+.content-image-container-active {
     position: fixed;
     top: 0;
     left: 0;
@@ -136,7 +172,7 @@ a:hover, button:hover {
     z-index: 100;
 }
 
-.content-image-container-active>div{
+.content-image-container-active>.slider-item {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -145,15 +181,15 @@ a:hover, button:hover {
     height: 60%;
 }
 
+/*End active image styles/*/
+
 .content-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-
-
-.pencil{
+.pencil {
     text-align: center;
 }
 
@@ -161,7 +197,7 @@ a:hover, button:hover {
     position: relative;
     display: inline-block;
     margin: auto;
-    margin-top: -50%; 
+    margin-top: -50%;
     z-index: 10;
 }
 
@@ -175,7 +211,6 @@ a:hover, button:hover {
 }
 
 .content-pencil>i {
- 
     border-radius: 50%;
     padding: 0.3em;
     font-size: 3em;
@@ -190,7 +225,7 @@ a:hover, button:hover {
     line-height: 1.5;
 }
 
-.content-text p{
+.content-text p {
     padding: 0;
     margin: 0;
 }
@@ -203,21 +238,21 @@ a:hover, button:hover {
 }
 
 .content-footer li {
-    width: 3em;    
+    width: 3em;
 }
 
-.content-footer a{
+.content-footer a {
     display: block;
     padding: 0.75em 1em;
 }
 
-.content-footer>li:last-child{
+.content-footer>li:last-child {
     background-color: #61C276;
     width: auto;
     color: inherit;
 }
 
-.content-footer>li:last-child i{
+.content-footer>li:last-child i {
     color: inherit;
     margin-left: 0.3em;
 }
@@ -287,11 +322,10 @@ a:hover, button:hover {
     padding-bottom: 5em;
     background-color: #313131;
     border-radius: 50%;
-    background-position: center;  
-    background-repeat: no-repeat; 
-    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
 
 .sidebar-latestPost-item-text {
     font-size: 0.8em;
@@ -299,10 +333,10 @@ a:hover, button:hover {
     margin: 0.2em;
 }
 
-.sidebar-latestPost-item-info{
+.sidebar-latestPost-item-info {
     margin: 0.2em;
 }
 
-.sidebar-latestPost-item-info span{
+.sidebar-latestPost-item-info span {
     font-size: 0.8em;
 }
