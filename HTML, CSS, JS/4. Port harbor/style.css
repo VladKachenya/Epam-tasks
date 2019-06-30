@@ -133,12 +133,17 @@ a:hover, button:hover {
     display: none;
 }
 
+.slider-item:first-child{
+    display: block;
+}
+
 .content-image-container-active>a{
     display: block;
     position: relative;
     height: 100%;
     width: 20%;
     cursor: pointer;
+    color: rgba(17, 0, 255, 0.25);
 }
 
 .content-image-container-active>a>span{
@@ -148,6 +153,11 @@ a:hover, button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 6em; 
+    color: inherit;
+}
+
+.content-image-container-active>a:hover{
+    color: rgb(16, 7, 139);
 }
 
 .slider-prev{
@@ -158,27 +168,28 @@ a:hover, button:hover {
     float: right;
 }
 
-.slider-item:first-child{
-    display: block;
-}
-
 .content-image-container-active {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #31313171;
+    background-color: rgba(47, 48, 48, 0.699);
     z-index: 100;
 }
 
-.content-image-container-active>.slider-item {
+.content-image-container-active .slider-item {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
     height: 60%;
+
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
 /*End active image styles/*/

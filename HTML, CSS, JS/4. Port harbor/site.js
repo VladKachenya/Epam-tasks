@@ -6,17 +6,35 @@ var galleryUrl = window.location.href.split('4.%20Port%20harbor')[0]
 const mainImageDefaultClass = 'content-image-container';
 const mainImageActiveClass = 'content-image-container-active';
 
-//Получаем блок с картинками 
-var main_img = document.getElementById('main_img');
-
-//Обработчик события нажатия на картинку
-main_img.onclick = function(){ mainImageClassReboot();}
-
 //Индекс слайда по умолчанию
 var slideIndex = 1;
 
+var sliderAnimationType = 1;
+
+
+//Получаем блок с картинками 
+var main_img = document.getElementById('main_img');
+//Стрелка в лево
+var leftArrow = document.getElementsByClassName('slider-prev')[0];
+//Стрелка в право
+var rightArrow = document.getElementsByClassName('slider-next')[0];
+
+//Обработчик события нажатия на картинку
+main_img.onclick = function () { mainImageClassReboot(); }
+
+leftArrow.onclick = function (event) {
+    minusSlide();
+    event.stopPropagation();
+}
+
+rightArrow.onclick = function (event) {
+    plusSlide();
+    event.stopPropagation();
+}
+
+window.onload = function(){ validateSliderAnimationType();}
+
 init();
-//showSlides(slideIndex);
 
 function init() {
     //Получение из session storege адрес на картинку из галереи
@@ -53,9 +71,9 @@ function mainImageClassReboot() {
 // Основная функция слайдера 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("item");
+    let slides = document.getElementsByClassName("slider-item");
     if (n > slides.length) {
-      slideIndex = 1
+        slideIndex = 1
     }
     if (n < 1) {
         slideIndex = slides.length
@@ -63,18 +81,33 @@ function showSlides(n) {
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
-    
+
     slides[slideIndex - 1].style.display = "block";
 }
 
 // Функция уменьшяет индекс на 1, показывает предыдущий слайд
 function minusSlide() {
-    showSlides(slideIndex -= 1);  
+    showSlides(slideIndex -= 1);
+}
+
+// Функция увеличивает индекс на 1, показывает следующй слайд
+function plusSlide() {
+    showSlides(slideIndex += 1);
 }
 
 // Устанавливает текущий слайд 
 function currentSlide(n) {
     showSlides(slideIndex = n);
+}
+
+function validateSliderAnimationType() {
+    let animationType = prompt('Выберите анимацию слайдера:\n' +
+        '1 - исчезает/появляется;\n' +
+        '2 - вверх/вниз;\n' +
+        '3 - лево/право.', 1);
+    if (animationType >= 1 && animationType <= 3) {
+        sliderAnimationType = animationType;
+    }
 }
 
 
