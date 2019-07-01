@@ -6,10 +6,13 @@ var galleryUrl = window.location.href.split('4.%20Port%20harbor')[0]
 const mainImageDefaultClass = 'content-image-container';
 const mainImageActiveClass = 'content-image-container-active';
 
+const curentItemClass = "slider-item-current";
+const prevItemClass = "slider-item-prev";
+const itemClass = "slider-item";
+
 //Индекс слайда по умолчанию
 var slideIndex = 1;
 var prevSlide = 0;
-
 var sliderAnimationType = 1;
 
 
@@ -33,9 +36,8 @@ rightArrow.onclick = function (event) {
     event.stopPropagation();
 }
 
-window.onload = function () { validateSliderAnimationType(); }
+document.addEventListener("DOMContentLoaded", validateSliderAnimationType);
 
-init();
 
 function init() {
     //Получение из session storege адрес на картинку из галереи
@@ -50,6 +52,15 @@ function init() {
     var pencils = document.getElementsByClassName('pencil');
     for (let index = 0; index < pencils.length; index++) {
         pencils[index].getElementsByTagName('a')[0].href = galleryUrl;
+    }
+    let items = main_img.getElementsByTagName('li');
+
+    //Задание классов для слайдера
+    for (let index = 0; index < items.length; index++) {
+        if(index == 0){
+            items[index].classList.add(curentItemClass + sliderAnimationType);
+        }
+        items[index].classList.add(itemClass + sliderAnimationType);
     }
 }
 
@@ -71,16 +82,12 @@ function mainImageClassReboot() {
 
 // Основная функция слайдера 
 function showSlides(n) {
-    let curentClass = "slider-item-current";
-    let prevClass = "slider-item-prev";
-    let i;
-    let slides = document.getElementsByClassName("slider-item");
+    let slides = document.getElementsByClassName(itemClass + sliderAnimationType);
 
     if (prevSlide > 0) {
-        slides[prevSlide - 1].classList.remove(prevClass);
+        slides[prevSlide - 1].classList.remove(prevItemClass + sliderAnimationType);
     }
-    slides[slideIndex - 1].classList.remove(curentClass);
-
+    slides[slideIndex - 1].classList.remove(curentItemClass + sliderAnimationType);
 
     prevSlide = slideIndex;
 
@@ -93,13 +100,8 @@ function showSlides(n) {
     else {
         slideIndex = n;
     }
-
-    // for (i = 0; i < slides.length; i++) {
-    //     slides[i].style.opacity = "0";
-    // }
-
-    slides[prevSlide - 1].classList.add(prevClass);
-    slides[slideIndex - 1].classList.add(curentClass);
+    slides[prevSlide - 1].classList.add(prevItemClass + sliderAnimationType);
+    slides[slideIndex - 1].classList.add(curentItemClass + sliderAnimationType);
 }
 
 // Функция уменьшяет индекс на 1, показывает предыдущий слайд
@@ -117,13 +119,14 @@ function plusSlide() {
 // Устанавливает текущий слайд 
 
 function validateSliderAnimationType() {
-    let animationType = prompt('Выберите анимацию слайдера:\n' +
-        '1 - исчезает/появляется;\n' +
-        '2 - вверх/вниз;\n' +
-        '3 - лево/право.', 1);
-    if (animationType >= 1 && animationType <= 3) {
-        sliderAnimationType = animationType;
-    }
+    // let animationType = prompt('Выберите анимацию слайдера:\n' +
+    //     '1 - исчезает/появляется;\n' +
+    //     '2 - вверх/вниз;\n' +
+    //     '3 - лево/право.', 1);
+    // if (animationType >= 1 && animationType <= 3) {
+    //     sliderAnimationType = animationType;
+    // }
+    init();
 }
 
 
