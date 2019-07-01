@@ -8,6 +8,7 @@ const mainImageActiveClass = 'content-image-container-active';
 
 //Индекс слайда по умолчанию
 var slideIndex = 1;
+var prevSlide = 0;
 
 var sliderAnimationType = 1;
 
@@ -32,7 +33,7 @@ rightArrow.onclick = function (event) {
     event.stopPropagation();
 }
 
-window.onload = function(){ validateSliderAnimationType();}
+window.onload = function () { validateSliderAnimationType(); }
 
 init();
 
@@ -70,35 +71,50 @@ function mainImageClassReboot() {
 
 // Основная функция слайдера 
 function showSlides(n) {
+    let curentClass = "slider-item-current";
+    let prevClass = "slider-item-prev";
     let i;
     let slides = document.getElementsByClassName("slider-item");
+
+    if (prevSlide > 0) {
+        slides[prevSlide - 1].classList.remove(prevClass);
+    }
+    slides[slideIndex - 1].classList.remove(curentClass);
+
+
+    prevSlide = slideIndex;
+
     if (n > slides.length) {
-        slideIndex = 1
+        slideIndex = 1;
     }
-    if (n < 1) {
-        slideIndex = slides.length
+    else if (n < 1) {
+        slideIndex = slides.length;
     }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+    else {
+        slideIndex = n;
     }
 
-    slides[slideIndex - 1].style.display = "block";
+    // for (i = 0; i < slides.length; i++) {
+    //     slides[i].style.opacity = "0";
+    // }
+
+    slides[prevSlide - 1].classList.add(prevClass);
+    slides[slideIndex - 1].classList.add(curentClass);
 }
 
 // Функция уменьшяет индекс на 1, показывает предыдущий слайд
 function minusSlide() {
-    showSlides(slideIndex -= 1);
+    let n = slideIndex - 1;
+    showSlides(n);
 }
 
 // Функция увеличивает индекс на 1, показывает следующй слайд
 function plusSlide() {
-    showSlides(slideIndex += 1);
+    let n = slideIndex + 1;
+    showSlides(n);
 }
 
 // Устанавливает текущий слайд 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
 
 function validateSliderAnimationType() {
     let animationType = prompt('Выберите анимацию слайдера:\n' +

@@ -130,11 +130,7 @@ a:hover, button:hover {
 /*Slider styles*/
 
 .slider-item{
-    display: none;
-}
-
-.slider-item:first-child{
-    display: block;
+    position: absolute;
 }
 
 .content-image-container-active>a{
@@ -179,17 +175,43 @@ a:hover, button:hover {
 }
 
 .content-image-container-active .slider-item {
-    position: absolute;
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
     height: 60%;
 
-    -webkit-animation-name: fade;
+    
+}
+
+/*slides transitions*/
+.slider-item{
+    position: absolute;
+    opacity: 0;
+}
+
+li.slider-item-prev.slider-item{
+    -webkit-animation-name: disappearing-animation;
     -webkit-animation-duration: 1.5s;
-    animation-name: fade;
+    animation-name: disappearing-animation;
     animation-duration: 1.5s;
+    animation-direction: reverse;
+    z-index: 10;
+}
+
+li.slider-item-current.slider-item{
+    opacity: 1;
+}
+
+
+@keyframes disappearing-animation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 /*End active image styles/*/
