@@ -3,7 +3,7 @@
     float: left;
     padding: 25px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row; //или флекс или флоат
     align-items: stretch;
 }
 
